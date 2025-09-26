@@ -1,0 +1,151 @@
+.o_chatter, .o_Chatter {
+    display: none !important;
+}
+
+.o_employee_avatar,
+.o_field_image.oe_avatar,
+.o_employee_avatar img,
+div.o_employee_avatar > div > div > img,
+.o_form_sheet .o_employee_avatar,
+.o_employee_avatar .o_field_image {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.o_employee_avatar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.o_form_sheet > .o_employee_avatar,
+.oe_avatar.m-0,
+.o_field_widget.o_field_image.oe_avatar {
+    display: none !important;
+}
+
+.oe_title,
+div.oe_title,
+.o_form_sheet .oe_title,
+body > div.o_action_manager > div > div > div.o_content > div > div > div.o_form_sheet.position-relative.clearfix > div.oe_title {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.oe_title h1,
+.oe_title h2, 
+.oe_title h3,
+.oe_title span,
+.oe_title div {
+    display: none !important;
+}
+
+.o_form_sheet > div.oe_title,
+.o_form_sheet > div:first-child.oe_title {
+    display: none !important;
+}
+
+.o_search_panel,
+div.o_search_panel,
+.flex-grow-0.flex-shrink-0.border-end.pe-2.pb-5.ps-4.h-100.bg-view.overflow-auto,
+body > div.o_action_manager > div > div.o_content.o_component_with_search_panel > div.o_search_panel.flex-grow-0.flex-shrink-0.border-end.pe-2.pb-5.ps-4.h-100.bg-view.overflow-auto {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.o_component_with_search_panel {
+    grid-template-columns: 0 1fr !important;
+}
+
+.o_content {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.border-end {
+    border-right: none !important;
+}
+
+.o_form_statusbar,
+div.o_form_statusbar,
+.position-relative.d-flex.justify-content-between.border-bottom,
+body > div.o_action_manager > div > div > div.o_content > div > div > div.o_form_statusbar.position-relative.d-flex.justify-content-between.border-bottom {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.o_form_sheet {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+button[name="iniciar_plan"],
+button:contains("Iniciar Plan"),
+.o_form_statusbar button:contains("Iniciar") {
+    display: none !important;
+}
+
+.o_menu_sections .o_menu_item:not(:contains("Eleccom")) {
+    display: none !important;
+}
+
+.o_menu_item:contains("Eleccom") {
+    display: block !important;
+}
+
+body > header > nav > div.o_menu_systray.d-flex.flex-shrink-0.ms-auto > div.o-dropdown.dropdown.o_debug_manager.o-dropdown--no-caret > button,
+.o_debug_manager, .o-dropdown.o_debug_manager {
+    display: none !important;
+}
+
+/* Llamadas */
+body > header > nav > div.o_menu_systray.d-flex.flex-shrink-0.ms-auto > div.CallSystrayMenuContainer,
+.CallSystrayMenuContainer {
+    display: none !important;
+}
+
+/* Mensajes */
+body > header > nav > div.o_menu_systray.d-flex.flex-shrink-0.ms-auto > div.MessagingMenuContainer,
+.MessagingMenuContainer {
+    display: none !important;
+}
+
+/* Actividades */
+body > header > nav > div.o_menu_systray.d-flex.flex-shrink-0.ms-auto > div.o_ActivityMenuView.dropdown,
+.o_ActivityMenuView.dropdown {
+    display: none !important;
+}
+
+/* === VISTA FORMULARIO === */
+[name="job_title"], label[for="job_title"] { display: none !important; }
+.o_employee_avatar, .o_employee_avatar img, .oe_avatar.m-0 { display: none !important; }
+.oe_title, div.oe_title { display: none !important; }
+[name="category_ids"], label[for="category_ids"] { display: none !important; }
+.o_chatter, .o_Chatter { display: none !important; }
+.o_form_statusbar { display: none !important; }
+
+/* === VISTA TREE/LISTA - SIDEBAR === */
+.o_search_panel { display: none !important; }
+.o_content.o_component_with_search_panel { margin-left: 0 !important; width: 100% !important; }
+
+/* === MENÚS PRINCIPALES === */
+.o_menu_item:contains("Conversaciones"),
+.o_menu_item:contains("Empleados Aplicaciones"), 
+.o_menu_item:contains("Ajustes"),
+.o_menu_item:contains("Settings") {
+    display: none !important;
+}

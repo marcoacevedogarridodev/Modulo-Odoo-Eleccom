@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_indefinido_contrato">
+        <t t-call="web.basic_layout">
+            <div class="page" style="font-family: Arial, sans-serif; line-height: 1.2; font-size: 12pt; padding: 0px; margin-top: 0px;">
+                
+                <!-- Título centrado -->
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h2 style="margin-bottom: 15px; font-size: 18pt; font-weight: bold;">CONTRATO DE TRABAJO</h2>
+                </div>
+                
+                <!-- Contenido del contrato -->
+                <div style="margin-bottom: 15px; text-align: justify;">
+                    <t t-foreach="docs" t-as="o">
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            En <span t-field="o.fecha_contrato" t-options='{"format": "dd/MM/yyyy"}'/>, entre ELECCOM SPA, RUT 77.369.548-2, representada legalmente por don BASTIAN GOMEZ SANTIS, cédula de identidad 20.140.508-4, Nacionalidad chileno, estado civil soltero, Correo : eleccomspa@hotmail.com, Fecha de nacimiento: 11 mayo 1999, por una parte; y don: <span t-field="o.name"/>, de nacionalidad CHILENA, cédula nacional de identidad <span t-field="o.rut"/>, estado civil soltero, fecha de nacimiento <span t-field="o.fecha_nacimiento" t-options='{"format": "dd/MM/yyyy"}'/>, teléfono: <span t-field="o.telefono_personal"/>, Correo: <span t-field="o.email_personal"/>. Dirección: <span t-field="o.direccion"/>, <span t-field="o.comuna"/>, Santiago, por la otra parte, quienes en adelante se denominarán respectivamente "el empleador" y "el trabajador" se conviene en el siguiente contrato de trabajo:
+                        </p>
+
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            1.- El empleador contrata los servicios del trabajador, quien se compromete y obliga a ejecutar especialmente las labores de MAESTRO ELECTRICO de la compañía.
+                            <br/><br/>
+                            Se hace presente que será facultad del empleador encomendarle al trabajador cualquier otro trabajo similar y, modificar, por causa justificada, el sitio o el recinto en que los servicios han de prestarse, con la sola limitación de que el nuevo sitio o recinto quede dentro de la misma localidad o ciudad, siempre que ello no signifique menoscabo para el trabajador.
+                            <br/><br/>
+                            Se deja expresa constancia que la empresa ha definido las funciones convenidas en el presente instrumento, de conformidad a una estructura organizacional y remunerativa objetiva en cumplimiento a las disposiciones sobre igualación de remuneraciones, declarando el trabajador tener conocimiento pleno de su alcance y contenido.
+                        </p>
+
+                        <p style="margin-bottom: 40px; font-size: 12pt;">
+                            2.- El trabajador cumplirá una jornada ordinaria de trabajo de 44 horas semanales como lo indica la ley 21461 y la jornada se pacta de la siguiente manera:
+                            <br/><br/>
+                            <u>DIURNO:</u><br/>
+                            Lunes a jueves de 8:00 a 18:00 horas, con 1 hora de colación.<br/>
+                            Viernes de: 08:00 a 17:00 horas, con 1 hora de colación.
+                            <br/><br/>
+                            <u>NOCTURNO:</u><br/>
+                            Lunes a jueves de 21:00 a 06:00 horas, con 1 hora de colación.<br/>
+                            Viernes de 21:00 a 05:00 horas, con 1 hora de colación.
+                            <br/><br/>
+                            La jornada ordinaria de trabajo será interrumpida por un descanso de 60 minutos destinados a la colación, tiempo que será de cargo del trabajador. Se deja expresamente establecido que se considerarán horas extraordinarias las trabajadas en exceso sobre la jornada ordinaria, siempre que hayan sido autorizadas por el empleador y acordada por escrito con el trabajador, en cada caso.
+                            <br/><br/>
+                            Se conviene en que será facultad exclusiva del empleador fijar la época del año en el que el trabajador hará uso de su feriado anual.
+                        </p>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            3.- El empleador se compromete a remunerar los servicios del trabajador con un <strong>sueldo bruto mensual de $ 529.000.-</strong>, será liquidado y pagado como periodos de pagos los días 15 (como quincena) y 30 del mes, por periodos mensuales calendario, en forma proporcional a los días efectivamente trabajados, depositados en la cuenta personal del trabajador, vía transferencia bancaria.
+                            <br/><br/>
+                            El trabajador tendrá derecho además, a percibir una <strong>gratificación mensual garantizada</strong>, equivalente al 25% de su remuneración mensual, con el tope legal dispuesto por el artículo 50 del Código del Trabajo.
+                            <br/><br/>  
+                            Conjuntamente el empleador pagará al trabajador las siguientes <strong>asignaciones mensuales</strong>:
+                            <br/>
+                            - Una asignación de $50,000 para Colación. Este Beneficio se cancelará en forma proporcional a los días trabajados.
+                            <br/>
+                            - Una asignación de $50,000 para Movilización. Este Beneficio se cancelará en forma proporcional a los días trabajados.
+                            <br/><br/>
+                            El trabajador, asimismo, acepta y autoriza al empleador para que le descuente el tiempo efectivamente no trabajado debido a inasistencias y los demás descuentos por cotizaciones previsionales e impuestos o retenciones judiciales que procedieren.
+                        </p>
+                        
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            4.- Serán obligaciones del trabajador, las siguientes:
+                            <br/><br/>
+                            A - OBLIGACIONES ESPECÍFICAS Y/O COMPLEMENTARIAS:
+                            <br/><br/>
+                            a - Ejecutar las labores propias de su cargo.
+                            <br/>
+                            b - Cumplir las funciones y labores específicas encomendadas por su jefatura.
+                            <br/>
+                            c - Velar por la seguridad propia, de las maquinarias y del recinto.
+                            <br/><br/>
+                            d - OBLIGACIONES GENERALES:
+                            <br/><br/>
+                            a - Presentarse a su trabajo al inicio de la jornada en buen estado físico y psíquico.
+                            <br/>
+                            b - Adoptar todas las medidas de resguardo y prevención de riesgos para evitar accidentes propios o de terceros.
+                            <br/>
+                            c - Utilizar los elementos de protección personal propios de su función.
+                            <br/>
+                            d - Cumplir las instrucciones de seguridad en el cumplimiento de su función.
+                            <br/>
+                            e - Cumplir con la reglamentación y políticas internas de la empresa.
+                            <br/>
+                            f - Notificar al empleador con anticipación respecto a los requerimientos existentes
+                            para el buen desempeño de sus funciones, como asimismo de cualquier
+                            infracción, siniestro o accidente de tránsito en que haya tenido participación el
+                            vehículo.
+                        </p>
+
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            Sin perjuicio de las obligaciones establecidas en la presente cláusulas las partes
+                            elevan a la condición de esencial, el deber absoluto e indefinido de confidencialidad y
+                            reserva que el trabajador debe mantener respecto de toda la información de la que
+                            tome conocimiento en el desempeño de su cargo.
+                        </p>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            En tal contexto, el trabajador se obliga especialmente:
+                            <br/><br/>
+                            a - Mantener absoluta reserva sobre los antecedentes comerciales, laborales,
+                            tributarios, bases de datos, información personal de la empresa, sus directores,
+                            gerentes y ejecutivos, clientes, potenciales clientes y en general toda
+                            información de la que tome conocimiento en el desempeño de su función.
+                            <br/>
+                            b - Mantener a mantener rigurosa reserva y confidencialidad de toda la
+                            información técnica, contable, financiera, económica, estratégica, comercial y/o
+                            profesional de que tome conocimiento en el desarrollo de su labor, respetando
+                            la propiedad intelectual e industrial del empleador.
+                            <br/>
+                            c - Mantener estricta reserva de todos aquellos antecedentes que directa o
+                            indirectamente lleguen a su conocimiento sobre negocios o asuntos del
+                            empleador o de alguno de sus clientes, por los cuales este haya ordenado
+                            reserva o que, por simple lógica, se deduzca la calidad de reservado. Quedan
+                            resguardos por esta prohibición los procedimientos y estrategias de gestión,
+                            análisis estratégicos, modelos y planes de negocio, líneas de desarrollo
+                            estratégica, know-how, informes, estudios, antecedentes de base, registros,
+                            bases de datos, orgánicas e inorgánicas, libros, archivos, contratos, marcas,
+                            derechos de imagen, conceptos corporativos y en general toda propiedad
+                            industrial e intelectual de la empresa.
+                        </p>
+
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            La violación del trabajador de cualquiera de las obligaciones de reserva y
+                            confidencialidad importará un incumplimiento grave de las obligaciones contenidas en
+                            el contrato de trabajo, al tenor del artículo 160 N°7 del Código del Trabajo y facultará al
+                            empleador para ejercer las acciones civiles y penales destinadas a establecer la
+                            responsabilidad por la vulneración de este deber esencial.
+                        </p>
+
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            En tal contexto, el empleador quedará facultado para ejercer las acciones reparatorias
+                            y compensatorios destinadas al cobro de indemnizaciones de perjuicios, directos,
+                            indirectos, previstos e imprevistos causados con motivo u ocasión de la vulneración
+                            del deber de confidencialidad.
+                        </p>
+
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            Asimismo, el empleador quedará facultado para ejercer las acciones penales y/o
+                            criminales destinadas a la persecución de los delitos e ilícitos vinculados a la
+                            vulneración de la obligación de confidencialidad que el trabajador asume en este acto.
+                            En virtud de lo anterior, el empleador o cualquiera de sus representantes podrá
+                            impetrar ante el Ministerio Público el ejercicio de las acciones penales punitivas
+                            destinadas a establecer la responsabilidad del trabajador por vulneración de las
+                            normas de confidencialidad.
+                            Se deja expresa constancia que las obligaciones de confidencialidad tendrán carácter
+                            permanente y subsistirán en forma indefinida, aun en el evento de conclusión por
+                            cualquier causa del presente contrato de trabajo.
+                        </p>
+
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            5.- Sin perjuicio de lo anterior, serán causales de terminación del presente contrato, las
+                            contenidas en los artículos 159, 160 y 161 del Código del Trabajo, y las que a
+                            continuación se señalan cada una de las cuales tendrán el carácter de esenciales y
+                            determinantes configurando estas por sí mismas causal de terminación ipso facto:
+                            <br/><br/>
+                            a - Ejecutar durante las horas de trabajo y en el desempeño de sus funciones,
+                            actividades ajenas a su labor y al establecimiento o dedicarse a atender asuntos o
+                            negocios particulares.
+                            <br/>
+                            b - Ejecutar por sí o por persona extraña, negociaciones o transacciones
+                            comerciales con productos distribuidos por el empleador y ejecutar cualquier acto de
+                            comercio que pueda entenderse o derivarse como competencia del empleador.
+                            <br/>
+                            c - Negarse a trabajar sin causa justificada en la faena o labor que se le asigne o
+                            encomiende de acuerdo a lo estipulado en el punto 1 de este contrato.
+                            <br/>
+                            d - Presentarse al trabajo en estado de ebriedad, consumir bebidas alcohólicas o
+                            sustancias prohibidas, dentro de las horas de labor o introducir dichas bebidas o
+                            sustancias al establecimiento faena o lugares de trabajo.
+                            <br/>
+                            e - Negarse a acatar las órdenes e instrucciones de su jefatura inmediata.
+                            <br/>
+                            f - Incumplir cualquier de las obligaciones esenciales contempladas en la cláusula
+                            precedente.
+                            <br/>
+                            g - La utilización, uso, reproducción total o parcial, comercialización, aplicación,
+                            difusión o implementación no autorizada de programas, software, hardware y sistemas
+                            informáticos que no cuenten con la licencia que faculte expresa y personalmente su
+                            uso, incluso las partes, piezas, datos contenidos o componentes particulares de los
+                            mismos en el desempeño de las funciones que contractualmente se le encomiendan.
+                            <br/>
+                            <br/><br/>
+                            <br/><br/>
+                            h - La destrucción, apropiación indebida, inutilización, intercepción, interferencia,
+                            obstaculización, modificación, intervención y/o difusión no autorizada de sistemas de
+                            tratamiento de información, partes o componentes.
+                            <br/>
+                            i - La alteración, daño o destrucción de datos contenidos en un sistema de
+                            tratamiento de información.
+                            <br/>
+                            j - En consecuencia, la infracción a cualquiera de las normas anteriormente
+                            mencionadas, constituirán en todo caso incumplimiento grave a las obligaciones que
+                            impone el contrato y según proceda legalmente, el empleador se reserva el derecho
+                            de poner fin a los servicios del trabajador.
+                            <br/>
+                            k - El uso para fines personales o de terceros no autorizados de la infraestructura,
+                            equipamiento, telefonía, computadores y conexiones Internet o correo electrónico de
+                            propiedad de la empresa.
+                        </p>
+
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            6.- Eventualmente el trabajador podrá utilizar vehículos motorizados, máquinas,
+                            herramientas y/o maquinarias de propiedad de la empresa. En tal contexto, se deja
+                            expresa constancia que el trabajador es personalmente responsable respecto de todos
+                            los daños o perjuicios personales y materiales, directos e indirectos, multas,
+                            infracciones, partes, indemnizaciones, compensaciones o pagos derivados de su
+                            conducción o uso indebido y de los perjuicios ocasionados en virtud de tal función, a
+                            terceros o en propiedad pública o privada, autorizando de forma irrevocable a su
+                            empleador para descontarlos de su liquidación de remuneración mensual de acuerdo
+                            al artículo 58º del Código del Trabajo, con un tope del 15% establecido en dicha
+                            disposición. Del mismo modo, el trabajador autoriza al empleador para descontar
+                            dichos valores de su finiquito de contrato de trabajo.
+                            <br/>
+                            El trabajador se obliga expresamente a desarrollar su trabajo con el doble de cuidado,
+                            velando en todo momento por el control absoluto de su lugar de trabajo y adoptando las
+                            medidas de seguridad y prevención de riesgos que al efecto sean necesarias.
+                            <br/>
+                            El trabajador autoriza a su empleador, de conformidad al artículo 58 del Código del
+                            Trabajo, a descontar de su remuneración todo daño que a terceros con motivo de su
+                            conducción negligente o culpable, mal uso, uso no autorizado o fuera del marco de sus
+                            funciones o atribuciones, que pudieren recaer sobre la empresa. Asimismo, si dichos
+                            descuentos fueren insuficientes, el trabajador viene en autorizar al empleador para
+                            practicar el saldo de descuentos de cualquier haber que le corresponda percibir
+                            conforme su finiquito de contrato de trabajo.
+                            <br/>
+                            Los partes o infracciones cursados al trabajador en su calidad de conductor son de su
+                            exclusiva responsabilidad y en caso alguno podrán imputarse a la empresa.
+                            <br/>
+                            Se eleva a la condición de esencial para la mantención de la relación laboral, la
+                            circunstancia de contar el trabajador con la Licencia de la Clase necesaria de
+                            conformidad a la ley de tránsito para hacer conducción del vehículo de la empresa.
+                        </p>
+
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            7.- Se deja expresa constancia que los servicios contratados por el presente
+                            instrumento tienen la condición de exclusivos, quedando en consecuencia prohibido
+                            para el trabajador la ejecución de estos servicios u otros similares a favor de cualquier
+                            persona natural o jurídica distintas a su empleador.
+                        </p>
+
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            8.- El trabajador declara tener pleno conocimiento técnico de su función, recibiendo en
+                            este acto copia íntegra del Reglamento de Orden, Higiene y Seguridad, obligándose a
+                            cumplir estrictamente sus disposiciones y conocer los derechos y obligaciones
+                            emanados de dicho instrumento.
+                        </p>
+
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            9.- El presente contrato tiene la calidad de contrato Indefinido.
+                        </p>
+
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            10.- El trabajador ingresó al servicio del empleador el 12 agosto 2024.
+                        </p>
+
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            11.- El presente contrato se firma en dos ejemplares, quedando uno en poder de cada
+                            parte.
+                        </p>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <br/><br/>
+                        <!-- Firmas -->
+                        <div>
+                            <div style="text-align: center; margin-bottom: 150px;">
+                                <span t-field="o.name"/><br/>
+                                <span t-field="o.rut"/>
+                            </div>
+
+                            <div style="text-align: center;">
+                                Eleccom SPA<br/>
+                                77.369.548-2
+                            </div>
+
+                        </div>  
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <record id="paperformat_indefinido_contrato" model="report.paperformat">
+        <field name="name">Contrato Indefinido</field>
+        <field name="format">A4</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">20</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">15</field>
+        <field name="margin_right">15</field>
+    </record>
+
+    <record id="action_report_indefinido_contrato" model="ir.actions.report">
+        <field name="name">Contrato Indefinido</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">eleccom.report_indefinido_contrato</field>
+        <field name="print_report_name">'ContratoIndefinido'</field>
+        <field name="paperformat_id" ref="paperformat_indefinido_contrato"/>
+    </record>
+</odoo>

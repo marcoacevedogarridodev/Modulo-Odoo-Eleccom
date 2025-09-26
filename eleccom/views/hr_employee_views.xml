@@ -1,0 +1,187 @@
+<odoo>
+    <data>
+        <record id="view_employee_tree_custom" model="ir.ui.view">
+            <field name="name">hr.employee.tree.custom</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="replace">
+                    <tree>
+                        <field name="rut" string="RUT"/>
+                        <field name="nombre_completo" string="Trabajador"/>
+                        <field name="centro_costo_nombre" string="Centro de Costo"/>
+                        <field name="fecha_contrato" string="Fecha de Contrato"/>
+                        <field name="fecha_termino_contrato" string="Fecha Termino Contrato"/>
+                        <field name="tiene_ficha_covid" string="Ficha Covid"/>
+                    </tree>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_employee_form_custom" model="ir.ui.view">
+            <field name="name">hr.employee.form.custom</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+
+                <field name="name" position="replace"/>
+        
+                <field name="job_title" position="replace"/>
+                
+                <field name="category_ids" position="replace"/>
+                
+                <xpath expr="//group" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//notebook" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//div[contains(@class, 'chatter')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//sheet" position="inside">
+                    <group string="Datos Personales" class="fs-4">
+                        <group col="2">
+                            <field name="rut"/>
+                            <field name="nombre"/>
+                            <field name="apellido_paterno"/>
+                            <field name="apellido_materno"/>
+                            <field name="nombre_completo" readonly="1"/>
+                            <field name="fecha_nacimiento"/>
+                            <field name="sexo"/>
+                            <field name="chileno"/>
+                        </group>
+                        
+                        <group col="2">
+                            <field name="nacionalidad"/>
+                            <field name="direccion"/>
+                            <field name="comuna"/>
+                            <field name="telefono_personal"/>
+                            <field name="celular"/>
+                            <field name="email_personal"/>
+                            <field name="centro_costo_Codigo"/>
+                            <field name="centro_costo_nombre"/>
+                            <field name="cargo"/>
+                        </group>
+                        
+                    </group>
+
+                    <group string="Sueldo" class="fs-4">
+                        <group col="2">
+                            <field name="sueldo"/>
+                            <field name="sueldo_uf"/>
+                        </group>
+                        
+                        <group col="2">
+                            <field name="sueldo_diario"/>
+                            <field name="sueldo_hora"/>
+                            <field name="sueldo_empresarial"/>   
+                        </group>     
+                    </group>
+
+                    <group string="Prevision" class="fs-4">
+                        <group col="2">
+                            <field name="isapre"/>
+                            <field name="fun_isapre"/>
+                            <field name="cotizacion_pactada_salud"/>
+                            <field name="cotizacion_pactada_salud_pesos"/>
+                            <field name="cotizacion_pactada_salud_porcentaje"/>
+                            <field name="afp"/>
+                            <field name="tipo_trabajador"/>
+                            <field name="monto_cuenta2_afp"/>
+                            <field name="seguro_cesantia"/>
+                            <field name="seguro_cesantia_empleador"/>
+                            <field name="numero_cargas_familiares"/>
+                            <field name="ahorro_voluntario"/>
+                            <field name="apv_uf"/>
+                            <field name="empresa_apv"/>
+                            <field name="forma_pago_apv"/>
+                            <field name="apv_reg"/>
+                            <field name="tipo_impuesto"/>
+                            <field name="trabajador_agricola"/>
+                        </group>
+                        
+                        <group col="2">
+                            <field name="prestamo_solidario"/>
+                            <field name="ahorro_voluntario2"/>
+                            <field name="apv_uf2"/>
+                            <field name="empresa_apv2"/>
+                            <field name="forma_pago_apv2"/>
+                            <field name="apv_reg2"/>
+                            <field name="empresa_apvc"/>
+                            <field name="ahorro_voluntarioc"/>
+                            <field name="forma_pago_apvc"/>
+                            <field name="apv_regc"/>
+                            <field name="apv_ufc"/>
+                            <field name="porcentaje_apvc_trab"/>
+                            <field name="prestamo_caja"/>
+                            <field name="prestamo_caja2"/>
+                            <field name="caja"/>
+                            <field name="caja_trabajador"/>
+                            <field name="seguro_accidente"/>
+                            <field name="fecha_primera_afiliacion"/>
+                            <field name="afiliado_voluntario"/>  
+                        </group>     
+                    </group>
+
+                    <group string="Contrato" class="fs-4">
+                        <group col="2">
+                            <field name="fecha_contrato"/>
+                            <field name="fecha_termino_contrato"/>
+                            <field name="fecha_contrato"/>
+                            <field name="clausula_termino"/>
+                            <field name="colacion_mensual"/>                            
+                        </group>
+                        
+                        <group col="2">
+                            <field name="colacion_diaria"/>
+                            <field name="movilizacion_mensual"/>
+                            <field name="movilizacion_diaria"/>
+                            <field name="tipo_jornada"/>
+                            <field name="region"/>
+                            <field name="comuna_id"/>
+                        </group>     
+                    </group>
+
+                    <group string="Horas Extras" class="fs-4">
+                        <group col="2">
+                            <field name="horas_trabajadas"/>
+                            <field name="dias_semana_part_time"/>
+                        </group>
+                        
+                        <group col="2">
+                            <field name="usar_sueldo_minimo"/>
+                            <field name="factor_especial_horas_extra"/>
+                        </group>     
+                    </group>
+
+                    <group string="Otros" class="fs-4">
+                        <group col="2">
+                            <field name="porc_trabajo_pesado_trab"/>
+                            <field name="porc_trabajo_pesado_emp"/>
+                            <field name="pensionado_invalidez"/>
+                            <field name="vacaciones_progresivas"/>
+                            <field name="vacaciones_progresivas_anio"/>
+                        </group>
+                        
+                        <group col="2">
+                            <field name="tec_extranjero"/>
+                            <field name="tiene_ficha_covid"/>
+                            <field name="banco"/>
+                            <field name="numero_cuenta"/>
+                            <field name="zona_extrema"/>
+                        </group>     
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="user_basico_demo" model="res.users">
+            <field name="name">Usuario Básico Demo</field>
+            <field name="login">usuario_basico</field>
+            <field name="groups_id" eval="[(6,0,[ref('eleccom.group_user_basico')])]"/>
+            <field name="action_id" ref="hr.open_view_employee_list_my"/>
+        </record>
+    </data>
+</odoo>

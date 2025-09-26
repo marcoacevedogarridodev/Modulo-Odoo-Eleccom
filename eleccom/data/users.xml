@@ -1,0 +1,44 @@
+<!-- users.xml -->
+<odoo>
+    <!-- Grupo de seguridad -->
+    <record id="group_user_basico" model="res.groups">
+        <field name="name">Usuario Básico</field>
+        <field name="category_id" ref="base.module_category_human_resources"/>
+    </record>
+
+    <!-- Acción principal para empleados -->
+    <record id="action_employee_custom" model="ir.actions.act_window">
+        <field name="name">Empleados</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <!-- MENÚ PRINCIPAL -->
+    <menuitem id="menu_eleccom_root" name="Eleccom" sequence="1"/>
+
+    <!-- EMPLEADOS -->
+    <menuitem id="menu_eleccom_empleados"
+              name="Empleados"
+              parent="menu_eleccom_root"
+              action="action_employee_custom"
+              sequence="1"/>
+
+    <!-- Permisos -->
+    <record id="access_hr_employee_basico" model="ir.model.access">
+        <field name="name">hr.employee.basico</field>
+        <field name="model_id" ref="model_hr_employee"/>
+        <field name="group_id" ref="group_user_basico"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <!-- Usuario demo (opcional) -->
+    <record id="user_basico_demo" model="res.users">
+        <field name="name">Usuario Básico Demo</field>
+        <field name="login">usuario_basico</field>
+        <field name="password">usuario_basico</field>
+        <field name="groups_id" eval="[(6,0,[ref('eleccom.group_user_basico')])]"/>
+    </record>
+</odoo>

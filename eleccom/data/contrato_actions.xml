@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_server_descargar_contrato" model="ir.actions.server">
+        <field name="name">Descargar Contrato</field>
+        <field name="model_id" ref="model_hr_employee"/>
+        <field name="binding_model_id" ref="model_hr_employee"/>
+        <field name="state">code</field>
+        <field name="code"><![CDATA[
+if records:
+    # Verificar que haya un empleado seleccionado
+    if len(records) == 1:
+        action = records.generar_anexo_contrato_pdf()
+    else:
+        # Si hay múltiples seleccionados, usar el primero
+        action = records[0].generar_anexo_contrato_pdf()
+]]></field>
+    </record>
+
+    <record id="action_server_descargar_contrato_indefinido" model="ir.actions.server">
+        <field name="name">Descargar Contrato Indefinido</field>
+        <field name="model_id" ref="model_hr_employee"/>
+        <field name="binding_model_id" ref="model_hr_employee"/>
+        <field name="state">code</field>
+        <field name="code"><![CDATA[
+if records:
+    if len(records) == 1:
+        action = records.generar_contrato_indefinido_pdf()
+    else:
+        action = records[0].generar_contrato_indefinido_pdf()
+]]></field>
+    </record>
+
+    <record id="action_server_descargar_contrato_obra" model="ir.actions.server">
+        <field name="name">Descargar Contrato por Obra</field>
+        <field name="model_id" ref="model_hr_employee"/>
+        <field name="binding_model_id" ref="model_hr_employee"/>
+        <field name="state">code</field>
+        <field name="code"><![CDATA[
+# Por ahora genera el mismo contrato, después se personaliza
+if records:
+    action = records.generar_anexo_contrato_pdf()
+]]></field>
+    </record>
+</odoo>

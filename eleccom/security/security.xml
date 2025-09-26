@@ -1,0 +1,7 @@
+<odoo>
+    <record id="group_user_basico" model="res.groups">
+        <field name="name">Usuario Basico</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+</odoo>
+

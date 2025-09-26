@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_anexo_contrato">
+        <t t-call="web.basic_layout">
+            <div class="page" style="font-family: Arial, sans-serif; line-height: 1.2; font-size: 12px; padding: 0px; margin-top: 0px;">
+                
+                <!-- Título centrado -->
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h2 style="margin-bottom: 15px; font-size: 18pt; font-weight: bold;">ANEXO DE CONTRATO</h2>
+                </div>
+                
+                <!-- Contenido del contrato -->
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <t t-foreach="docs" t-as="o">                            
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            En Santiago a <span t-field="o.fecha_contrato" t-options='{"format": "dd/MM/yyyy"}'/>, entre ELECCOM SPA, Rut: 77.369.548-2, representada legalmente por <br/>
+                            Don: BASTIAN GOMEZ SANTIS, Rut: 20.140.508-4, Correo: eleccomspa@hotmail.com, por una parte; y <br/>
+                            Don: <span t-field="o.name"/>, de nacionalidad <span t-field="o.nacionalidad"/>, cedula: <span t-field="o.rut"/>, fecha de nacimiento <br/>
+                            <span t-field="o.fecha_nacimiento" t-options='{"format": "dd/MM/yyyy"}'/>, domiciliado en <span t-field="o.direccion"/>, <span t-field="o.comuna"/>, Teléfono: <span t-field="o.telefono_personal"/>, mail: <span t-field="o.email_personal"/>.
+                        </p>    
+                        
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            Por la otra parte quienes en adelante se denominará "empleador"; y "trabajador" y respectivamente se acuerda el siguiente anexo contrato de trabajo;
+                        </p>
+                        
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            Se modificará el contrato original en las siguientes clausulas:
+                        </p>
+                        
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            N° 2 del contrato original
+                        </p>
+                        
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            La ley del 26 de abril 2024, Ley 21.561 (40 horas laborales) que reduce gradualmente la jornada laboral, concretándose la primera etapa de implementación de la ley con una reducción obligatoria de trabajo de 45 a 44 horas semanales, distribuidas de lunes a viernes.
+                        </p>
+                        
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            N° 3 del contrato original
+                        </p>
+                        
+                        <p style="margin-bottom: 10px; font-size: 12pt;">
+                            El presente anexo de contrato modifica el nuevo sueldo mínimo, según lo establecido por la Ley 21.578 desde el <span t-field="o.fecha_contrato" t-options='{"format": "dd/MM/yyyy"}'/>, el ingreso mínimo mensual subirá a $ 529.000.
+                        </p>
+                        
+                        <p style="margin-bottom: 150px; font-size: 12pt;">
+                            Se firman dos copias quedando una para el trabajador y una para el empleador
+                        </p>
+                        
+                        <!-- Firmas -->
+                        <div>
+                            <div style="text-align: center; margin-bottom: 150px; font-size: 12pt;">
+                                <span t-field="o.name"/><br/>
+                                <span t-field="o.rut"/>
+                            </div>
+
+                            <div style="text-align: center; font-size: 12pt;">
+                                Eleccom SPA<br/>
+                                77.369.548-2
+                            </div>
+
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <record id="paperformat_eleccom" model="report.paperformat">
+        <field name="name">Anexo Contrato</field>
+        <field name="format">A4</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">20</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">15</field>
+        <field name="margin_right">15</field>
+    </record>
+
+    <record id="action_report_anexo_contrato" model="ir.actions.report">
+        <field name="name">Anexo de Contrato</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">eleccom.report_anexo_contrato</field>
+        <field name="print_report_name">'AnexoContrato'</field>
+        <field name="paperformat_id" ref="paperformat_eleccom"/>
+    </record>
+</odoo>
