@@ -112,25 +112,21 @@ body > header > nav > div.o_menu_systray.d-flex.flex-shrink-0.ms-auto > div.o-dr
     display: none !important;
 }
 
-/* Llamadas */
 body > header > nav > div.o_menu_systray.d-flex.flex-shrink-0.ms-auto > div.CallSystrayMenuContainer,
 .CallSystrayMenuContainer {
     display: none !important;
 }
 
-/* Mensajes */
 body > header > nav > div.o_menu_systray.d-flex.flex-shrink-0.ms-auto > div.MessagingMenuContainer,
 .MessagingMenuContainer {
     display: none !important;
 }
 
-/* Actividades */
 body > header > nav > div.o_menu_systray.d-flex.flex-shrink-0.ms-auto > div.o_ActivityMenuView.dropdown,
 .o_ActivityMenuView.dropdown {
     display: none !important;
 }
 
-/* === VISTA FORMULARIO === */
 [name="job_title"], label[for="job_title"] { display: none !important; }
 .o_employee_avatar, .o_employee_avatar img, .oe_avatar.m-0 { display: none !important; }
 .oe_title, div.oe_title { display: none !important; }
@@ -138,14 +134,55 @@ body > header > nav > div.o_menu_systray.d-flex.flex-shrink-0.ms-auto > div.o_Ac
 .o_chatter, .o_Chatter { display: none !important; }
 .o_form_statusbar { display: none !important; }
 
-/* === VISTA TREE/LISTA - SIDEBAR === */
 .o_search_panel { display: none !important; }
 .o_content.o_component_with_search_panel { margin-left: 0 !important; width: 100% !important; }
 
-/* === MENÚS PRINCIPALES === */
 .o_menu_item:contains("Conversaciones"),
 .o_menu_item:contains("Empleados Aplicaciones"), 
 .o_menu_item:contains("Ajustes"),
 .o_menu_item:contains("Settings") {
     display: none !important;
+}
+
+body > div.o_action_manager > div > div > div.o_control_panel > div > div.o_cp_top_left.d-flex.flex-grow-1.align-items-center > ol > li.breadcrumb-item.active.d-flex.align-items-center > div > div > button.o_form_button_save.btn.btn-light.py-0,
+button.o_form_button_save,
+.o_form_button_save {
+    display: none !important;
+}
+
+.o_form_view .o_cp_bottom_right > div:not(:has(button.o_list_button_add)),
+.o_form_view .o_searchview_search,
+.o_form_view .o_button_import,
+.o_form_view .o_button_export,
+.o_form_view .o_graph_button,
+.o_form_view .o_pivot_button {
+    display: none !important;
+}
+
+.o_form_view button.o_list_button_add,
+.o_form_view button:contains("Nuevo"),
+.o_form_view button:contains("New") {
+    display: inline-block !important;
+    visibility: visible !important;
+}
+
+body > div.o_action_manager > div > div > div.o_control_panel > div > div.o_cp_bottom_right.w-auto.flex-shrink-0.justify-content-between.align-items-center > button {
+    font-size: 0;
+}
+
+body > div.o_action_manager > div > div > div.o_control_panel > div > div.o_cp_bottom_right.w-auto.flex-shrink-0.justify-content-between.align-items-center > button::after {
+    content: "Guardar";
+    font-size: 14px;
+}
+
+/* OCULTAR OPCIONES DE BÚSQUEDA EN VISTA LISTA */
+body > div.o_action_manager > div > div.o_control_panel > div.o_cp_bottom > div.o_cp_bottom_right > div.btn-group.o_search_options.position-static,
+.o_search_options,
+.btn-group.o_search_options {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
